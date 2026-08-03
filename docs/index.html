@@ -95,7 +95,6 @@
     .brand img {
       width: 42px;
       height: 42px;
-      border-radius: 11px;
       object-fit: contain;
       flex-shrink: 0;
     }
@@ -125,9 +124,9 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
       align-items: center;
-      gap: 48px;
+      gap: 44px;
     }
 
     .eyebrow {
@@ -200,28 +199,17 @@
     }
 
     .hero-visual {
-      position: relative;
       display: flex;
+      align-items: center;
       justify-content: center;
-    }
-
-    .hero-visual::before {
-      position: absolute;
-      inset: 10%;
-      border-radius: 50%;
-      background: var(--primary);
-      filter: blur(50px);
-      opacity: 0.44;
-      content: "";
+      min-width: 0;
     }
 
     .app-icon {
-      position: relative;
-      width: min(100%, 350px);
+      width: min(100%, 340px);
       height: auto;
-      border-radius: 24%;
       object-fit: contain;
-      box-shadow: 0 16px 40px rgba(78, 59, 36, 0.14);
+      filter: drop-shadow(0 18px 30px rgba(78, 59, 36, 0.14));
     }
 
     .section {
@@ -430,6 +418,14 @@
         padding: 54px 0;
       }
 
+      .hero-visual {
+        margin-top: 8px;
+      }
+
+      .app-icon {
+        width: min(82vw, 300px);
+      }
+
       .feature-grid,
       .backup-panel {
         grid-template-columns: 1fr;
@@ -455,7 +451,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Keeper トップ">
-        <img src="images/icon.png" alt="Keeper アプリアイコン">
+        <img src="images/icon.png?v=2" alt="Keeper アプリアイコン">
         <span>Keeper</span>
       </a>
 
@@ -505,8 +501,10 @@
         <div class="hero-visual">
           <img
             class="app-icon"
-            src="images/icon.png"
+            src="images/icon.png?v=2"
             alt="フォルダーからKの紙が見えるKeeperのアプリアイコン"
+            width="340"
+            height="340"
           >
         </div>
       </div>
