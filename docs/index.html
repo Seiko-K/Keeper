@@ -444,6 +444,23 @@
         padding: 28px 22px;
       }
     }
+
+        .footer-links{
+        display:flex;
+        gap:24px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    
+    .footer-links a{
+        color:#6b5842;
+        text-decoration:none;
+    }
+    
+    .footer-links a:hover{
+        text-decoration:underline;
+    }
+    
   </style>
 </head>
 
@@ -460,7 +477,7 @@
         <a href="#backup">バックアップ</a>
         <a href="#screenshots">画面</a>
         <a href="#download">ダウンロード</a>
-        <a href="privacy-policy-ja.html">プライバシー</a>
+        <a href="privacy.html">プライバシーポリシー</a>
       </nav>
     </div>
   </header>
@@ -487,13 +504,10 @@
               Keeperについて
             </a>
 
-            <a
-              class="button secondary"
-              href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              お問い合わせ
+            <a href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
+               target="_blank"
+               rel="noopener">
+                お問い合わせ
             </a>
           </div>
         </div>
@@ -648,30 +662,32 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        © 2026 Keeper
-      </div>
+<footer class="footer">
+  <div class="container footer-inner">
 
-      <div class="footer-links">
-        <a href="privacy-policy-ja.html">
-          プライバシーポリシー
-        </a>
-
-        <a href="privacy-policy-en.html">
-          Privacy Policy
-        </a>
-
-        <a
-          href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          お問い合わせ
-        </a>
-      </div>
+    <div>
+      © 2026 Keeper
     </div>
-  </footer>
+
+    <div class="footer-links">
+
+      <a href="privacy.html">
+        プライバシーポリシー / Privacy Policy
+      </a>
+
+      <a href="privacy-policy-en.html">
+        Privacy Policy
+      </a>
+
+      <a href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
+         target="_blank"
+         rel="noopener">
+        お問い合わせ
+      </a>
+
+    </div>
+
+  </div>
+</footer>
 </body>
 </html>
