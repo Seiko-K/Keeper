@@ -341,16 +341,19 @@
 
     .footer-inner {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 24px;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
       color: var(--muted);
       font-size: 0.92rem;
+      text-align: center;
     }
 
     .footer-links {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       gap: 18px;
     }
 
@@ -362,6 +365,19 @@
 
     .footer-links a:hover {
       color: var(--text);
+    }
+
+    .footer-contact {
+      min-height: 42px;
+      padding: 9px 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--text) !important;
+      box-shadow: 0 8px 22px rgba(78, 59, 36, 0.07);
     }
 
     @media (max-width: 860px) {
@@ -418,14 +434,6 @@
         padding: 54px 0;
       }
 
-      .hero-visual {
-        margin-top: 8px;
-      }
-
-      .app-icon {
-        width: min(82vw, 300px);
-      }
-
       .feature-grid,
       .backup-panel {
         grid-template-columns: 1fr;
@@ -444,23 +452,6 @@
         padding: 28px 22px;
       }
     }
-
-        .footer-links{
-        display:flex;
-        gap:24px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-    
-    .footer-links a{
-        color:#6b5842;
-        text-decoration:none;
-    }
-    
-    .footer-links a:hover{
-        text-decoration:underline;
-    }
-    
   </style>
 </head>
 
@@ -468,7 +459,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Keeper トップ">
-        <img src="images/icon.png?v=2" alt="Keeper アプリアイコン">
+        <img src="images/icon.png?v=3" alt="Keeper アプリアイコン">
         <span>Keeper</span>
       </a>
 
@@ -477,7 +468,7 @@
         <a href="#backup">バックアップ</a>
         <a href="#screenshots">画面</a>
         <a href="#download">ダウンロード</a>
-        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="privacy.html">プライバシー</a>
       </nav>
     </div>
   </header>
@@ -504,10 +495,13 @@
               Keeperについて
             </a>
 
-            <a href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
-               target="_blank"
-               rel="noopener">
-                お問い合わせ
+            <a
+              class="button secondary"
+              href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お問い合わせ
             </a>
           </div>
         </div>
@@ -515,10 +509,8 @@
         <div class="hero-visual">
           <img
             class="app-icon"
-            src="images/icon.png?v=2"
+            src="images/icon.png?v=3"
             alt="フォルダーからKの紙が見えるKeeperのアプリアイコン"
-            width="340"
-            height="340"
           >
         </div>
       </div>
@@ -662,32 +654,22 @@
     </section>
   </main>
 
-<footer class="footer">
-  <div class="container footer-inner">
-
-    <div>
-      © 2026 Keeper
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="privacy.html#english">Privacy Policy</a>
+        <a
+          class="footer-contact"
+          href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          お問い合わせ
+        </a>
+      </div>
+      <div>© 2026 Keeper</div>
     </div>
-
-    <div class="footer-links">
-
-      <a href="privacy.html">
-        プライバシーポリシー / Privacy Policy
-      </a>
-
-      <a href="privacy-policy-en.html">
-        Privacy Policy
-      </a>
-
-      <a href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
-         target="_blank"
-         rel="noopener">
-        お問い合わせ
-      </a>
-
-    </div>
-
-  </div>
-</footer>
+  </footer>
 </body>
 </html>
