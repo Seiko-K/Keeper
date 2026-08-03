@@ -1,310 +1,227 @@
-# Keeper Privacy Policy / プライバシーポリシー
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keeper Privacy Policy / プライバシーポリシー</title>
+  <meta name="theme-color" content="#ebcfa5">
+  <style>
+    :root {
+      --background: #fffaf2;
+      --surface: #ffffff;
+      --primary-soft: #f8e9d0;
+      --text: #2d2926;
+      --muted: #746b63;
+      --border: #eadfce;
+      --shadow: 0 18px 48px rgba(78, 59, 36, 0.10);
+      --radius-large: 32px;
+      --radius-medium: 22px;
+      --content-width: 980px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      line-height: 1.8;
+    }
+    .container { width: min(calc(100% - 40px), var(--content-width)); margin: 0 auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 10;
+      border-bottom: 1px solid rgba(234, 223, 206, 0.85);
+      background: rgba(255, 250, 242, 0.92);
+      backdrop-filter: blur(18px);
+    }
+    .header-inner {
+      min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+      color: var(--text); font-size: 1.25rem; font-weight: 800; text-decoration: none;
+    }
+    .brand img { width: 42px; height: 42px; object-fit: contain; }
+    .navigation { display: flex; flex-wrap: wrap; gap: 18px; }
+    .navigation a { color: var(--muted); font-weight: 700; text-decoration: none; }
+    .hero { padding: 72px 0 36px; text-align: center; }
+    .eyebrow {
+      display: inline-flex; padding: 7px 14px; border-radius: 999px;
+      background: var(--primary-soft); color: #765b35; font-weight: 800;
+    }
+    h1 { margin: 22px 0 14px; font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 1.16; }
+    .updated { margin: 0; color: var(--muted); }
+    .language-nav { margin-top: 28px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .language-nav a, .contact-button, .footer-contact {
+      min-height: 46px; padding: 10px 19px; display: inline-flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+      color: var(--text); font-weight: 800; text-decoration: none;
+      box-shadow: 0 8px 22px rgba(78, 59, 36, 0.06);
+    }
+    .policy-card {
+      margin: 34px auto 70px; padding: clamp(26px, 5vw, 54px);
+      border: 1px solid var(--border); border-radius: var(--radius-large);
+      background: var(--surface); box-shadow: var(--shadow);
+    }
+    .policy-section + .policy-section { margin-top: 70px; padding-top: 70px; border-top: 1px solid var(--border); }
+    .policy-section h2 { margin: 0 0 24px; font-size: clamp(1.75rem, 4vw, 2.6rem); }
+    .policy-section h3 { margin: 34px 0 10px; font-size: 1.2rem; }
+    .policy-section h4 { margin: 22px 0 8px; font-size: 1.03rem; }
+    .policy-section p, .policy-section ul { color: #514a44; }
+    .external-link { word-break: break-all; color: #765b35; font-weight: 700; }
+    .contact-box { margin-top: 22px; padding: 22px; border-radius: var(--radius-medium); background: var(--primary-soft); text-align: center; }
+    .footer { padding: 42px 0; border-top: 1px solid var(--border); }
+    .footer-inner {
+      display: flex; flex-direction: column; align-items: center; gap: 22px;
+      color: var(--muted); font-size: 0.92rem; text-align: center;
+    }
+    .footer-links { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 18px; }
+    .footer-links a { color: var(--muted); font-weight: 700; text-decoration: none; }
+    @media (max-width: 640px) {
+      .container { width: min(calc(100% - 28px), var(--content-width)); }
+      .site-header { position: static; }
+      .header-inner { padding: 14px 0; display: block; }
+      .navigation { margin-top: 12px; justify-content: flex-start; }
+      .hero { padding-top: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/icon.png?v=3" alt="Keeper アプリアイコン">
+        <span>Keeper</span>
+      </a>
+      <nav class="navigation">
+        <a href="index.html">ホーム</a>
+        <a href="#japanese">日本語</a>
+        <a href="#english">English</a>
+        <a href="https://forms.gle/PYEoVw6iZAjhQ6Jw5" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
 
-**Last Updated / 最終更新日:** 2026-08-03
-
----
-
-# 日本語
-
-## プライバシーポリシー
-
-Keeper（以下「本アプリ」）をご利用いただきありがとうございます。
-
-本アプリは、利用者が大切な情報を安全に保存・管理するためのアプリです。
-利用者のプライバシーを尊重し、以下の方針に基づいて情報を取り扱います。
-
----
-
-## 1. 取得する情報
-
-本アプリでは、利用者が任意に登録した以下の情報を取り扱います。
-
-- タイトル
-- カテゴリー
-- メーカー
-- 型番
-- URL
-- メモ
-- PDFファイル
-- 写真
-
-これらの情報は原則として利用者の端末内へ保存されます。
-
-運営者がこれらの内容を取得・閲覧することはありません。
-
----
-
-## 2. カメラ・写真へのアクセス
-
-本アプリは以下の目的でカメラ・写真ライブラリへアクセスする場合があります。
-
-- 型番OCR
-- 写真登録
-- PDF登録
-
-利用者が選択・撮影したデータのみ利用します。
-
----
-
-## 3. OCR（文字認識）
-
-型番入力を補助するためOCR機能を使用します。
-
-OCR結果は自動保存されず、利用者が確認・選択して初めて登録されます。
-
----
-
-## 4. 生体認証
-
-本アプリはFace ID、Touch ID、指紋認証など端末標準の認証機能を利用できます。
-
-本アプリが顔画像・指紋データ等の生体情報を取得・保存することはありません。
-
-認証結果のみ利用します。
-
----
-
-## 5. マニュアル検索
-
-利用者が検索を実行した場合のみ、
-
-- メーカー
-- 型番
-- 製品名
-- 検索キーワード
-
-が検索サービスへ送信される場合があります。
-
-写真・PDF・メモ等は検索サービスへ送信されません。
-
----
-
-## 6. クラウドバックアップ
-
-バックアップは利用者が操作した場合のみ実行されます。
-
-画面を開いただけではバックアップは開始されません。
-
-### Android
-
-Google Drive（アプリ専用領域）
-
-### iPhone・iPad
-
-iCloud（CloudKit Private Database）
-
-へバックアップされます。
-
-バックアップには以下が含まれる場合があります。
-
-- データベース
-- PDF
-- 写真
-- メモ
-- カテゴリー
-- 並び順
-
-整合性確認のためSHA-256を使用しています。
-
----
-
-## 7. 広告
-
-本アプリではGoogle AdMobを利用する場合があります。
-
-広告表示のためGoogle Mobile Ads SDKが利用者情報を処理する場合があります。
-
-詳細はGoogleのプライバシーポリシーをご確認ください。
-
-https://policies.google.com/privacy
-
----
-
-## 8. 第三者提供
-
-登録した情報を販売・提供することはありません。
-
-ただし、
-
-- 利用者自身がバックアップした場合
-- 法令に基づく場合
-
-を除きます。
-
----
-
-## 9. データ削除
-
-利用者はアプリからデータを削除できます。
-
-アプリ削除後もGoogle DriveまたはiCloudへ保存されたバックアップは残る場合があります。
-
----
-
-## 10. セキュリティ
-
-復元時はSHA-256によりデータ整合性を確認しています。
-
----
-
-## 11. ポリシー変更
-
-必要に応じて本ポリシーを更新することがあります。
-
----
-
-## 12. お問い合わせ
-
-お問い合わせは以下のフォームをご利用ください。
-
-https://forms.gle/PYEoVw6iZAjhQ6Jw5
-
----
-
-# English
-
-## Privacy Policy
-
-Thank you for using Keeper.
-
-Keeper is an application for safely storing and organizing your important information.
-
-We respect your privacy and handle your information as described below.
-
----
-
-### Information You Store
-
-You may save:
-
-- Titles
-- Categories
-- Manufacturer names
-- Model numbers
-- URLs
-- Notes
-- PDF files
-- Photos
-
-These items are stored primarily on your device.
-
-The developer does not collect or view this content.
-
----
-
-### Camera & Photos
-
-The app may access the camera or photo library to:
-
-- Scan model numbers
-- Add photos
-- Import PDF files
-
-Only content selected by the user is processed.
-
----
-
-### OCR
-
-OCR is used only to assist with entering model numbers.
-
-OCR results are never saved automatically.
-
-Users review and confirm the results before saving.
-
----
-
-### Biometric Authentication
-
-Keeper supports Face ID, Touch ID and device authentication.
-
-The app never stores biometric information.
-
-Only the authentication result is used.
-
----
-
-### Manual Search
-
-When you perform a manual search, the following information may be sent to external search providers:
-
-- Manufacturer
-- Model Number
-- Product Name
-- Search Keywords
-
-Photos, PDFs and notes are not transmitted.
-
----
-
-### Cloud Backup
-
-Backups are performed only when the user explicitly starts them.
-
-Opening the backup screen never starts a backup.
-
-Android
-
-- Google Drive (App Data Folder)
-
-iPhone / iPad
-
-- iCloud (CloudKit Private Database)
-
-Backups may contain:
-
-- Database
-- PDF files
-- Photos
-- Notes
-- Categories
-- Display order
-
-SHA-256 is used to verify backup integrity.
-
----
-
-### Advertising
-
-Keeper may use Google AdMob.
-
-Please refer to Google's Privacy Policy:
-
-https://policies.google.com/privacy
-
----
-
-### Third Parties
-
-The developer does not sell or share user content except:
-
-- Cloud backup requested by the user
-- Legal requirements
-
----
-
-### Data Deletion
-
-Users may delete data from within the app.
-
-Cloud backups stored in Google Drive or iCloud may remain until deleted separately.
-
----
-
-### Security
-
-SHA-256 verification is performed before restoring backups.
-
----
-
-### Policy Updates
-
-This Privacy Policy may be updated when necessary.
-
----
-
-### Contact
-
-For questions, bug reports or feedback, please use:
-
-https://forms.gle/PYEoVw6iZAjhQ6Jw5
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Keeper v1.0</span>
+        <h1>Privacy Policy<br>プライバシーポリシー</h1>
+        <p class="updated">最終更新日 / Last Updated: 2026-08-03</p>
+        <div class="language-nav">
+          <a href="#japanese">日本語版を読む</a>
+          <a href="#english">Read in English</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <article class="policy-card">
+        <section id="japanese" class="policy-section">
+          <h2>日本語版</h2>
+          <p>Keeper（以下「本アプリ」）をご利用いただきありがとうございます。本アプリは、利用者が大切な情報を安全に保存・整理するためのアプリです。利用者のプライバシーを尊重し、以下の方針に基づいて情報を取り扱います。</p>
+
+          <h3>1. 取得する情報</h3>
+          <p>本アプリでは、利用者が任意に登録した以下の情報を取り扱います。</p>
+          <ul><li>タイトル</li><li>カテゴリー</li><li>メーカー</li><li>型番</li><li>URL</li><li>メモ</li><li>PDFファイル</li><li>写真</li></ul>
+          <p>これらの情報は原則として利用者の端末内へ保存されます。運営者がこれらの内容を取得・閲覧することはありません。</p>
+
+          <h3>2. カメラ・写真へのアクセス</h3>
+          <p>型番OCR、写真登録、PDF登録のためにカメラ・写真ライブラリへアクセスする場合があります。利用者が選択または撮影したデータのみを利用します。</p>
+
+          <h3>3. OCR（文字認識）</h3>
+          <p>型番入力を補助するためOCR機能を使用します。OCR結果は自動保存されず、利用者が確認・選択して初めて登録されます。</p>
+
+          <h3>4. 生体認証</h3>
+          <p>Face ID、Touch ID、指紋認証など端末標準の認証機能を利用できます。本アプリが顔画像、指紋データ等の生体情報を取得・保存することはありません。</p>
+
+          <h3>5. マニュアル検索</h3>
+          <p>利用者が検索を実行した場合のみ、メーカー、型番、製品名、検索キーワードが検索サービスへ送信される場合があります。写真、PDF、メモ等は送信されません。</p>
+
+          <h3>6. クラウドバックアップ</h3>
+          <p>バックアップは利用者が操作した場合のみ実行されます。AndroidではGoogle Driveのアプリ専用領域、iPhone・iPadではiCloudのCloudKit Private Databaseへ保存されます。</p>
+
+          <h3>7. 広告</h3>
+          <p>本アプリではGoogle AdMobを利用する場合があります。詳細はGoogleのプライバシーポリシーをご確認ください。</p>
+          <p><a class="external-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+
+          <h3>8. 第三者提供</h3>
+          <p>登録した情報を販売または提供することはありません。ただし、利用者自身がバックアップした場合、または法令に基づく場合を除きます。</p>
+
+          <h3>9. データ削除</h3>
+          <p>利用者はアプリからデータを削除できます。アプリ削除後もGoogle DriveまたはiCloudへ保存されたバックアップは残る場合があります。</p>
+
+          <h3>10. セキュリティ</h3>
+          <p>復元時はSHA-256によりデータ整合性を確認しています。</p>
+
+          <h3>11. ポリシー変更</h3>
+          <p>必要に応じて本ポリシーを更新することがあります。</p>
+
+          <h3>12. お問い合わせ</h3>
+          <div class="contact-box">
+            <p>お問い合わせは以下のフォームをご利用ください。</p>
+            <a class="contact-button" href="https://forms.gle/PYEoVw6iZAjhQ6Jw5" target="_blank" rel="noopener noreferrer">Keeper お問い合わせフォーム</a>
+          </div>
+        </section>
+
+        <section id="english" class="policy-section" lang="en">
+          <h2>English Version</h2>
+          <p>Thank you for using Keeper. Keeper is an application for safely storing and organizing important information. We respect your privacy and handle information as described below.</p>
+
+          <h3>1. Information You Store</h3>
+          <p>You may save titles, categories, manufacturer names, model numbers, URLs, notes, PDF files, and photos. These items are stored primarily on your device. The developer does not collect or view this content.</p>
+
+          <h3>2. Camera and Photos</h3>
+          <p>The App may access the camera or photo library to scan model numbers, add photos, or import PDF files. Only content selected or captured by the user is processed.</p>
+
+          <h3>3. OCR</h3>
+          <p>OCR is used only to assist with entering model numbers. OCR results are not saved automatically.</p>
+
+          <h3>4. Biometric Authentication</h3>
+          <p>Keeper supports Face ID, Touch ID, fingerprint authentication, and other device authentication methods. The App never stores biometric information.</p>
+
+          <h3>5. Manual Search</h3>
+          <p>Manufacturer, model number, product name, and search keywords may be sent to external search providers. Photos, PDF files, and notes are not transmitted.</p>
+
+          <h3>6. Cloud Backup</h3>
+          <p>Backups are performed only when the user explicitly starts them. Android uses the Google Drive App Data Folder. iPhone and iPad use the iCloud CloudKit Private Database.</p>
+
+          <h3>7. Advertising</h3>
+          <p>Keeper may use Google AdMob. Please refer to Google's Privacy Policy.</p>
+          <p><a class="external-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+
+          <h3>8. Third Parties</h3>
+          <p>The developer does not sell or provide user content to third parties, except when the user requests cloud backup or when disclosure is required by law.</p>
+
+          <h3>9. Data Deletion</h3>
+          <p>Users may delete data from within the App. Cloud backups may remain until deleted separately.</p>
+
+          <h3>10. Security</h3>
+          <p>SHA-256 verification is performed before restoring backups.</p>
+
+          <h3>11. Policy Updates</h3>
+          <p>This Privacy Policy may be updated when necessary.</p>
+
+          <h3>12. Contact</h3>
+          <div class="contact-box">
+            <p>For questions, bug reports, or feedback, please use the following form.</p>
+            <a class="contact-button" href="https://forms.gle/PYEoVw6iZAjhQ6Jw5" target="_blank" rel="noopener noreferrer">Keeper Contact Form</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="index.html">ホーム</a>
+        <a href="#japanese">プライバシーポリシー</a>
+        <a href="#english">Privacy Policy</a>
+        <a class="footer-contact" href="https://forms.gle/PYEoVw6iZAjhQ6Jw5" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+      </div>
+      <div>© 2026 Keeper</div>
+    </div>
+  </footer>
+</body>
+</html>
