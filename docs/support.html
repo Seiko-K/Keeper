@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Keeper Support / サポート</title>
+
+  <meta
+    name="description"
+    content="Keeperアプリのサポートページです。よくある質問、バックアップ、復元、PDF閲覧、アプリロックなどをご案内します。"
+  >
+  <meta name="theme-color" content="#ebcfa5">
+
+  <style>
+    :root {
+      --background: #fffaf2;
+      --surface: #ffffff;
+      --primary-soft: #f8e9d0;
+      --text: #2d2926;
+      --muted: #746b63;
+      --border: #eadfce;
+      --shadow: 0 18px 48px rgba(78, 59, 36, 0.10);
+      --radius-large: 32px;
+      --radius-medium: 22px;
+      --content-width: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Hiragino Sans",
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+      line-height: 1.8;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--content-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(234, 223, 206, 0.85);
+      background: rgba(255, 250, 242, 0.92);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      font-size: 1.25rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+
+    .navigation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .navigation a {
+      color: var(--muted);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .navigation a:hover,
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 72px 0 36px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: #765b35;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 22px 0 14px;
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      line-height: 1.16;
+    }
+
+    .updated {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .language-nav {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .language-nav a,
+    .contact-button,
+    .footer-contact {
+      min-height: 46px;
+      padding: 10px 19px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 8px 22px rgba(78, 59, 36, 0.06);
+    }
+
+    .support-card {
+      margin: 34px auto 70px;
+      padding: clamp(26px, 5vw, 54px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-large);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .support-section + .support-section {
+      margin-top: 70px;
+      padding-top: 70px;
+      border-top: 1px solid var(--border);
+    }
+
+    .support-section h2 {
+      margin: 0 0 24px;
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+    }
+
+    .support-section h3 {
+      margin: 34px 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .support-section p,
+    .support-section ul,
+    .support-section ol {
+      color: #514a44;
+    }
+
+    .support-section ul,
+    .support-section ol {
+      padding-left: 1.4rem;
+    }
+
+    .support-section li + li {
+      margin-top: 8px;
+    }
+
+    .notice-box {
+      margin: 26px 0;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-medium);
+      background: var(--primary-soft);
+    }
+
+    .notice-box p {
+      margin: 0;
+    }
+
+    .quick-links {
+      margin: 30px 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .quick-links a {
+      min-height: 72px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-medium);
+      background: #fffdf9;
+      color: var(--text);
+      font-weight: 800;
+      text-decoration: none;
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+    }
+
+    .quick-links a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(78, 59, 36, 0.08);
+    }
+
+    details {
+      margin-top: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-medium);
+      background: #fffdf9;
+    }
+
+    summary {
+      padding: 20px 22px;
+      cursor: pointer;
+      font-weight: 800;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "＋";
+      float: right;
+      color: #9a7440;
+      font-size: 1.2rem;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .details-content {
+      padding: 0 22px 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .details-content p:first-child,
+    .details-content ul:first-child,
+    .details-content ol:first-child {
+      margin-top: 18px;
+    }
+
+    .external-link {
+      word-break: break-all;
+      color: #765b35;
+      font-weight: 700;
+    }
+
+    .contact-box {
+      margin-top: 28px;
+      padding: 26px;
+      border-radius: var(--radius-medium);
+      background: var(--primary-soft);
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin-top: 0;
+    }
+
+    .footer {
+      padding: 42px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(calc(100% - 28px), var(--content-width));
+      }
+
+      .site-header {
+        position: static;
+      }
+
+      .header-inner {
+        padding: 14px 0;
+        display: block;
+      }
+
+      .navigation {
+        margin-top: 12px;
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .quick-links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img
+          src="images/icon.png?v=3"
+          alt="Keeper アプリアイコン"
+        >
+        <span>Keeper</span>
+      </a>
+
+      <nav class="navigation" aria-label="メインナビゲーション">
+        <a href="index.html">ホーム</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="terms.html">利用規約</a>
+        <a href="#japanese">日本語</a>
+        <a href="#english">English</a>
+        <a
+          href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          お問い合わせ
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Keeper v1.0</span>
+
+        <h1>
+          Support<br>
+          サポート
+        </h1>
+
+        <p class="updated">
+          最終更新日 / Last Updated: 2026-08-04
+        </p>
+
+        <div class="language-nav">
+          <a href="#japanese">日本語版を読む</a>
+          <a href="#english">Read in English</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <article class="support-card">
+
+        <!-- 日本語版 -->
+        <section id="japanese" class="support-section">
+          <h2>日本語版</h2>
+
+          <p>
+            Keeperをご利用いただき、ありがとうございます。
+            このページでは、よくある質問や基本的な操作方法をご案内します。
+          </p>
+
+          <div class="notice-box">
+            <p>
+              Keeperへ登録した情報は、端末内に保存されます。
+              大切な情報を守るため、定期的なバックアップをおすすめします。
+            </p>
+          </div>
+
+          <div class="quick-links">
+            <a href="#backup-jp">バックアップについて</a>
+            <a href="#restore-jp">復元について</a>
+            <a href="#pdf-jp">PDFについて</a>
+            <a href="#lock-jp">アプリロックについて</a>
+            <a href="#search-jp">検索・カテゴリーについて</a>
+            <a href="#trouble-jp">トラブルシューティング</a>
+          </div>
+
+          <h3>Keeperについて</h3>
+
+          <p>
+            Keeperは、PDF、説明書、保証書、写真、URL、メモ、メーカー名、型番など、
+            利用者が選んだ情報をひとつの場所へ保存・整理するアプリです。
+          </p>
+
+          <p>
+            情報を保存する操作を、Keeperでは「Keeperする」と表現します。
+          </p>
+
+          <details>
+            <summary>登録した情報はどこに保存されますか？</summary>
+
+            <div class="details-content">
+              <p>
+                登録した情報は、基本的に利用端末のアプリ専用領域へ保存されます。
+              </p>
+
+              <p>
+                バックアップ機能を利用した場合は、利用者が選択した端末内の保存先、
+                Google Drive、またはiCloudにもバックアップデータが保存されます。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>アカウント登録は必要ですか？</summary>
+
+            <div class="details-content">
+              <p>
+                Keeperの基本機能を利用するための専用アカウント登録は必要ありません。
+              </p>
+
+              <p>
+                Google DriveまたはiCloudへのバックアップを利用する場合は、
+                端末で利用しているGoogleアカウントまたはApple Accountが必要です。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>インターネットに接続していなくても使えますか？</summary>
+
+            <div class="details-content">
+              <p>
+                端末内へ保存済みの情報やPDFは、基本的にオフラインでも確認できます。
+              </p>
+
+              <p>
+                Web検索、URLの表示、クラウドへのバックアップおよび復元、
+                広告表示などにはインターネット接続が必要です。
+              </p>
+            </div>
+          </details>
+
+          <h3 id="backup-jp">バックアップについて</h3>
+
+          <details open>
+            <summary>端末にバックアップする方法</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Keeperの設定画面を開きます。</li>
+                <li>「バックアップ」を選びます。</li>
+                <li>「端末にバックアップ」を選びます。</li>
+                <li>画面の案内に従って保存します。</li>
+              </ol>
+
+              <p>
+                バックアップ日時が表示されたら、処理は完了です。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Google Driveへバックアップする方法</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Android端末でKeeperの設定画面を開きます。</li>
+                <li>「バックアップ」を選びます。</li>
+                <li>「Google Driveにバックアップ」を選びます。</li>
+                <li>必要に応じてGoogleアカウントへのアクセスを許可します。</li>
+              </ol>
+
+              <p>
+                バックアップデータは、Keeperが利用するGoogle Driveのアプリ専用領域へ保存されます。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>iCloudへバックアップする方法</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>iPhoneでKeeperの設定画面を開きます。</li>
+                <li>「バックアップ」を選びます。</li>
+                <li>「iCloudにバックアップ」を選びます。</li>
+                <li>処理が完了するまでアプリを閉じずにお待ちください。</li>
+              </ol>
+
+              <p>
+                iCloudが利用できない場合は、iPhoneの設定でiCloud Driveが有効になっているか確認してください。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>バックアップは自動で行われますか？</summary>
+
+            <div class="details-content">
+              <p>
+                Keeper v1.0では、利用者がバックアップボタンを押したときにバックアップを実行します。
+              </p>
+
+              <p>
+                大切な情報を追加または編集した後は、手動でバックアップを行うことをおすすめします。
+              </p>
+            </div>
+          </details>
+
+          <h3 id="restore-jp">復元について</h3>
+
+          <details>
+            <summary>端末から復元する方法</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Keeperの設定画面を開きます。</li>
+                <li>「データを復元」を選びます。</li>
+                <li>「端末から復元」を選びます。</li>
+                <li>表示されるバックアップ日時を確認します。</li>
+                <li>復元を実行します。</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary>Google DriveまたはiCloudから復元する方法</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Keeperの設定画面を開きます。</li>
+                <li>「データを復元」を選びます。</li>
+                <li>使用している端末に応じて、Google DriveまたはiCloudからの復元を選びます。</li>
+                <li>バックアップ日時を確認します。</li>
+                <li>復元を実行します。</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary>復元すると現在のデータはどうなりますか？</summary>
+
+            <div class="details-content">
+              <p>
+                復元操作により、現在のKeeperデータがバックアップ時点の内容へ置き換わる場合があります。
+              </p>
+
+              <p>
+                復元前に現在のデータも残したい場合は、先に最新のバックアップを作成してください。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>機種変更前にしておくことはありますか？</summary>
+
+            <div class="details-content">
+              <p>
+                旧端末で、Google DriveまたはiCloudへの最新バックアップを作成してください。
+              </p>
+
+              <p>
+                新しい端末では、旧端末と同じGoogleアカウントまたはApple Accountを利用してください。
+              </p>
+            </div>
+          </details>
+
+          <h3 id="pdf-jp">PDFについて</h3>
+
+          <details>
+            <summary>保存したPDFを開く方法</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>ホーム画面から対象の情報を選びます。</li>
+                <li>詳細画面の「マニュアルを開く」を選びます。</li>
+              </ol>
+
+              <p>
+                端末内へ保存済みのPDFは、基本的にオフラインでも閲覧できます。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>PDFが開けません</summary>
+
+            <div class="details-content">
+              <ul>
+                <li>PDFファイルが削除または移動されていないか確認してください。</li>
+                <li>アプリを一度終了し、再度起動してください。</li>
+                <li>端末の空き容量を確認してください。</li>
+                <li>PDFファイルが破損していないか確認してください。</li>
+              </ul>
+
+              <p>
+                改善しない場合は、PDFを登録し直してください。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>PDFを拡大して閲覧できますか？</summary>
+
+            <div class="details-content">
+              <p>
+                PDF閲覧画面では、ピンチ操作に対応している場合、
+                2本の指で拡大・縮小できます。
+              </p>
+            </div>
+          </details>
+
+          <h3 id="lock-jp">アプリロックについて</h3>
+
+          <details>
+            <summary>アプリロックを有効にする方法</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Keeperの設定画面を開きます。</li>
+                <li>「アプリロック」を選びます。</li>
+                <li>画面の案内に従って認証を許可します。</li>
+              </ol>
+
+              <p>
+                利用できる認証方式は、端末によって異なります。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>対応している認証方式</summary>
+
+            <div class="details-content">
+              <ul>
+                <li>Face ID</li>
+                <li>Touch ID</li>
+                <li>指紋認証</li>
+                <li>端末のPIN</li>
+                <li>端末のパスコード</li>
+                <li>端末のパターン</li>
+              </ul>
+
+              <p>
+                Keeper独自のパスワードを作成する方式ではなく、
+                端末に設定されている認証機能を利用します。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Keeper内の画面移動でも毎回認証されますか？</summary>
+
+            <div class="details-content">
+              <p>
+                Keeper内を操作している間は、通常、画面移動のたびに認証を求めません。
+              </p>
+
+              <p>
+                アプリを完全に終了して再起動した場合や、
+                一定時間バックグラウンドに置いた後に戻った場合に、
+                再認証を求めることがあります。
+              </p>
+            </div>
+          </details>
+
+          <h3 id="search-jp">検索・カテゴリーについて</h3>
+
+          <details>
+            <summary>どの項目を検索できますか？</summary>
+
+            <div class="details-content">
+              <p>
+                Keeperでは、タイトル、メーカー名、型番などから情報を検索できます。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>カテゴリーで絞り込む方法</summary>
+
+            <div class="details-content">
+              <p>
+                ホーム画面上部のカテゴリー名を選ぶと、カテゴリー一覧が表示されます。
+              </p>
+
+              <p>
+                表示したいカテゴリーを選ぶと、そのカテゴリーに登録された情報だけを確認できます。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>ピン留めとは何ですか？</summary>
+
+            <div class="details-content">
+              <p>
+                よく見る情報をホーム画面上部へ表示する機能です。
+              </p>
+
+              <p>
+                ピンのアイコンを選ぶことで、ピン留めの追加または解除ができます。
+              </p>
+            </div>
+          </details>
+
+          <h3 id="trouble-jp">トラブルシューティング</h3>
+
+          <details>
+            <summary>アプリが正常に動作しません</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Keeperを一度終了し、再度起動してください。</li>
+                <li>端末を再起動してください。</li>
+                <li>Keeperが最新版か確認してください。</li>
+                <li>端末のOSが最新版か確認してください。</li>
+                <li>端末の空き容量を確認してください。</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary>バックアップに失敗します</summary>
+
+            <div class="details-content">
+              <ul>
+                <li>インターネット接続を確認してください。</li>
+                <li>Google DriveまたはiCloudへログインしているか確認してください。</li>
+                <li>クラウドの空き容量を確認してください。</li>
+                <li>端末の日付と時刻が正しいか確認してください。</li>
+                <li>時間を置いてから再度お試しください。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>広告が表示されません</summary>
+
+            <div class="details-content">
+              <p>
+                通信状況、広告配信状況、地域、端末設定などにより、
+                一時的に広告が表示されない場合があります。
+              </p>
+
+              <p>
+                広告が表示されなくても、Keeperの基本機能は利用できます。
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>登録したデータを削除したいです</summary>
+
+            <div class="details-content">
+              <p>
+                Keeper内の編集機能から、対象の情報を削除してください。
+              </p>
+
+              <p>
+                アプリを端末から削除すると、端末内に保存されているKeeperデータも失われる場合があります。
+                必要な情報は、削除前にバックアップしてください。
+              </p>
+            </div>
+          </details>
+
+          <h3>お問い合わせ</h3>
+
+          <div class="contact-box">
+            <p>
+              このページで解決しない問題、不具合の報告、ご意見・ご要望は、
+              以下のお問い合わせフォームからお送りください。
+            </p>
+
+            <p>
+              お問い合わせの際は、可能な範囲で次の情報をお知らせください。
+            </p>
+
+            <ul style="display: inline-block; text-align: left;">
+              <li>利用端末</li>
+              <li>OSのバージョン</li>
+              <li>Keeperのバージョン</li>
+              <li>問題が発生した操作</li>
+              <li>表示されたメッセージ</li>
+            </ul>
+
+            <p>
+              パスワード、認証コード、個人情報、保存しているPDFや写真そのものは送信しないでください。
+            </p>
+
+            <a
+              class="contact-button"
+              href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Keeper お問い合わせフォーム
+            </a>
+          </div>
+        </section>
+
+        <!-- English Version -->
+        <section id="english" class="support-section" lang="en">
+          <h2>English Version</h2>
+
+          <p>
+            Thank you for using Keeper.
+            This page provides answers to common questions and guidance on basic App features.
+          </p>
+
+          <div class="notice-box">
+            <p>
+              Information saved in Keeper is stored on your device.
+              We recommend creating regular backups to protect important information.
+            </p>
+          </div>
+
+          <div class="quick-links">
+            <a href="#backup-en">Backup</a>
+            <a href="#restore-en">Restore</a>
+            <a href="#pdf-en">PDF Viewing</a>
+            <a href="#lock-en">App Lock</a>
+            <a href="#search-en">Search and Categories</a>
+            <a href="#trouble-en">Troubleshooting</a>
+          </div>
+
+          <h3>About Keeper</h3>
+
+          <p>
+            Keeper is an app for storing and organizing information selected by the user,
+            including PDFs, manuals, warranty documents, photos, URLs, notes,
+            manufacturer names, and model numbers.
+          </p>
+
+          <p>
+            In Keeper, the action of saving information is described as “Keeper.”
+          </p>
+
+          <details>
+            <summary>Where is my information stored?</summary>
+
+            <div class="details-content">
+              <p>
+                Information is primarily stored in the App’s private storage area on your device.
+              </p>
+
+              <p>
+                When you create a backup, backup data may also be stored
+                in a location on your device, Google Drive, or iCloud,
+                depending on the option you select.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Do I need to create an account?</summary>
+
+            <div class="details-content">
+              <p>
+                A dedicated Keeper account is not required for the App’s basic features.
+              </p>
+
+              <p>
+                A Google Account or Apple Account is required when using
+                Google Drive or iCloud backup.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Can I use Keeper offline?</summary>
+
+            <div class="details-content">
+              <p>
+                Information and PDF files already stored on your device
+                can generally be viewed offline.
+              </p>
+
+              <p>
+                An internet connection is required for web search, opening URLs,
+                cloud backup and restore, and advertising.
+              </p>
+            </div>
+          </details>
+
+          <h3 id="backup-en">Backup</h3>
+
+          <details open>
+            <summary>How to create a device backup</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Open Keeper Settings.</li>
+                <li>Select “Backup.”</li>
+                <li>Select “Back up to device.”</li>
+                <li>Follow the on-screen instructions.</li>
+              </ol>
+
+              <p>
+                The backup is complete when the latest backup date and time are displayed.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How to back up to Google Drive</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Open Keeper Settings on your Android device.</li>
+                <li>Select “Backup.”</li>
+                <li>Select “Back up to Google Drive.”</li>
+                <li>Allow access to your Google Account when requested.</li>
+              </ol>
+
+              <p>
+                Backup data is stored in Keeper’s private app data area in Google Drive.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How to back up to iCloud</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Open Keeper Settings on your iPhone.</li>
+                <li>Select “Backup.”</li>
+                <li>Select “Back up to iCloud.”</li>
+                <li>Keep the App open until the backup is complete.</li>
+              </ol>
+
+              <p>
+                If iCloud is unavailable, confirm that iCloud Drive is enabled
+                in your iPhone settings.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Are backups created automatically?</summary>
+
+            <div class="details-content">
+              <p>
+                In Keeper v1.0, backups are created when the user selects a backup button.
+              </p>
+
+              <p>
+                We recommend creating a new backup after adding or editing important information.
+              </p>
+            </div>
+          </details>
+
+          <h3 id="restore-en">Restore</h3>
+
+          <details>
+            <summary>How to restore from a device backup</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Open Keeper Settings.</li>
+                <li>Select “Restore Data.”</li>
+                <li>Select “Restore from device.”</li>
+                <li>Review the displayed backup date.</li>
+                <li>Start the restore operation.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary>How to restore from Google Drive or iCloud</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Open Keeper Settings.</li>
+                <li>Select “Restore Data.”</li>
+                <li>Select Google Drive or iCloud, depending on your device.</li>
+                <li>Review the backup date.</li>
+                <li>Start the restore operation.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary>What happens to my current data when I restore?</summary>
+
+            <div class="details-content">
+              <p>
+                A restore operation may replace your current Keeper data
+                with the contents of the selected backup.
+              </p>
+
+              <p>
+                If you need to keep the current data, create a new backup before restoring.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What should I do before changing devices?</summary>
+
+            <div class="details-content">
+              <p>
+                Create a current Google Drive or iCloud backup on your old device.
+              </p>
+
+              <p>
+                Use the same Google Account or Apple Account on the new device.
+              </p>
+            </div>
+          </details>
+
+          <h3 id="pdf-en">PDF Viewing</h3>
+
+          <details>
+            <summary>How to open a saved PDF</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Select the relevant item from the Home screen.</li>
+                <li>Select “Open Manual” on the detail screen.</li>
+              </ol>
+
+              <p>
+                PDF files already stored on the device can generally be viewed offline.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>A PDF will not open</summary>
+
+            <div class="details-content">
+              <ul>
+                <li>Check whether the PDF file was deleted or moved.</li>
+                <li>Close and reopen Keeper.</li>
+                <li>Check available device storage.</li>
+                <li>Confirm that the PDF file is not corrupted.</li>
+              </ul>
+
+              <p>
+                If the issue continues, register the PDF again.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Can I zoom in on a PDF?</summary>
+
+            <div class="details-content">
+              <p>
+                When pinch-to-zoom is supported on the PDF viewer,
+                use two fingers to zoom in or out.
+              </p>
+            </div>
+          </details>
+
+          <h3 id="lock-en">App Lock</h3>
+
+          <details>
+            <summary>How to enable App Lock</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Open Keeper Settings.</li>
+                <li>Select “App Lock.”</li>
+                <li>Follow the on-screen instructions to allow authentication.</li>
+              </ol>
+
+              <p>
+                Available authentication methods depend on your device.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Supported authentication methods</summary>
+
+            <div class="details-content">
+              <ul>
+                <li>Face ID</li>
+                <li>Touch ID</li>
+                <li>Fingerprint authentication</li>
+                <li>Device PIN</li>
+                <li>Device passcode</li>
+                <li>Device pattern</li>
+              </ul>
+
+              <p>
+                Keeper uses authentication already configured on your device.
+                It does not require a separate Keeper password.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Will authentication appear on every screen?</summary>
+
+            <div class="details-content">
+              <p>
+                Authentication is not normally required every time you move
+                between screens inside Keeper.
+              </p>
+
+              <p>
+                Authentication may be required after fully closing and reopening the App,
+                or after returning to the App following an extended period in the background.
+              </p>
+            </div>
+          </details>
+
+          <h3 id="search-en">Search and Categories</h3>
+
+          <details>
+            <summary>What information can I search?</summary>
+
+            <div class="details-content">
+              <p>
+                Keeper supports searching by title, manufacturer name,
+                model number, and other supported fields.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How do I filter by category?</summary>
+
+            <div class="details-content">
+              <p>
+                Select the category name at the top of the Home screen
+                to display the category list.
+              </p>
+
+              <p>
+                Select a category to view only the information registered under that category.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What is pinning?</summary>
+
+            <div class="details-content">
+              <p>
+                Pinning places frequently viewed information near the top of the Home screen.
+              </p>
+
+              <p>
+                Select the pin icon to add or remove a pin.
+              </p>
+            </div>
+          </details>
+
+          <h3 id="trouble-en">Troubleshooting</h3>
+
+          <details>
+            <summary>The App is not working correctly</summary>
+
+            <div class="details-content">
+              <ol>
+                <li>Close and reopen Keeper.</li>
+                <li>Restart your device.</li>
+                <li>Confirm that Keeper is updated.</li>
+                <li>Confirm that your operating system is updated.</li>
+                <li>Check available device storage.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary>Backup fails</summary>
+
+            <div class="details-content">
+              <ul>
+                <li>Check your internet connection.</li>
+                <li>Confirm that you are signed in to Google Drive or iCloud.</li>
+                <li>Check available cloud storage.</li>
+                <li>Confirm that the device date and time are correct.</li>
+                <li>Wait and try again later.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>Advertisements are not displayed</summary>
+
+            <div class="details-content">
+              <p>
+                Advertisements may temporarily be unavailable due to network conditions,
+                ad availability, location, or device settings.
+              </p>
+
+              <p>
+                Keeper’s basic features remain available even when no advertisement is displayed.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How do I delete saved data?</summary>
+
+            <div class="details-content">
+              <p>
+                Use the editing function in Keeper to delete the relevant item.
+              </p>
+
+              <p>
+                Uninstalling the App may also delete Keeper data stored on the device.
+                Create a backup before uninstalling if you need to keep your information.
+              </p>
+            </div>
+          </details>
+
+          <h3>Contact</h3>
+
+          <div class="contact-box">
+            <p>
+              For problems not resolved on this page, bug reports,
+              feedback, or feature requests, please use the contact form below.
+            </p>
+
+            <p>
+              When contacting us, include the following information when possible:
+            </p>
+
+            <ul style="display: inline-block; text-align: left;">
+              <li>Device model</li>
+              <li>Operating system version</li>
+              <li>Keeper version</li>
+              <li>Steps that caused the issue</li>
+              <li>Any displayed error message</li>
+            </ul>
+
+            <p>
+              Do not submit passwords, authentication codes, personal information,
+              or the contents of your saved PDFs or photos.
+            </p>
+
+            <a
+              class="contact-button"
+              href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Keeper Contact Form
+            </a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="index.html">ホーム</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="terms.html">利用規約</a>
+        <a href="#japanese">サポート</a>
+        <a href="#english">Support</a>
+
+        <a
+          class="footer-contact"
+          href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          お問い合わせ
+        </a>
+      </div>
+
+      <div>© 2026 Keeper</div>
+    </div>
+  </footer>
+</body>
+</html>
