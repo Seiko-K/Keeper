@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Keeperは、取扱説明書、PDF、写真、メモなどの大切な情報を、ひとつに整理して保管できるAndroid・iOS対応アプリです。"
+    content="Keeperは、取扱説明書、PDF、写真、URL、メモなどの大切な情報を、ひとつに整理して保管できるAndroid・iOS対応アプリです。"
   >
 
   <meta name="theme-color" content="#ebcfa5">
@@ -65,6 +65,10 @@
       margin: 0 auto;
     }
 
+    /* =========================================================
+       Header
+       ========================================================= */
+
     .site-header {
       position: sticky;
       top: 0;
@@ -72,6 +76,7 @@
       border-bottom: 1px solid rgba(234, 223, 206, 0.85);
       background: rgba(255, 250, 242, 0.90);
       backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
     }
 
     .header-inner {
@@ -117,6 +122,10 @@
     .navigation a:hover {
       color: var(--text);
     }
+
+    /* =========================================================
+       Hero
+       ========================================================= */
 
     .hero {
       padding: 96px 0 76px;
@@ -212,6 +221,10 @@
       filter: drop-shadow(0 18px 30px rgba(78, 59, 36, 0.14));
     }
 
+    /* =========================================================
+       Sections
+       ========================================================= */
+
     .section {
       padding: 78px 0;
     }
@@ -233,6 +246,10 @@
       color: var(--muted);
       font-size: 1.08rem;
     }
+
+    /* =========================================================
+       Features
+       ========================================================= */
 
     .feature-grid {
       display: grid;
@@ -263,6 +280,10 @@
       margin: 0;
       color: var(--muted);
     }
+
+    /* =========================================================
+       Backup
+       ========================================================= */
 
     .backup-panel {
       padding: 38px;
@@ -295,17 +316,67 @@
       color: var(--muted);
     }
 
-    .screenshot-placeholder {
-      min-height: 260px;
-      padding: 40px;
-      display: grid;
-      place-items: center;
-      border: 2px dashed var(--border);
-      border-radius: var(--radius-large);
-      color: var(--muted);
-      text-align: center;
-      background: rgba(255, 255, 255, 0.55);
+    /* =========================================================
+       Screenshot Gallery
+       ========================================================= */
+
+    .screenshot-gallery {
+      display: flex;
+      gap: 22px;
+      overflow-x: auto;
+      padding: 8px 4px 30px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary) transparent;
+      -webkit-overflow-scrolling: touch;
     }
+
+    .screenshot-gallery::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .screenshot-gallery::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .screenshot-gallery::-webkit-scrollbar-thumb {
+      border-radius: 999px;
+      background: var(--primary);
+    }
+
+    .screenshot-card {
+      flex: 0 0 auto;
+      width: min(300px, 78vw);
+      scroll-snap-align: start;
+    }
+
+    .screenshot-card img {
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: #ffffff;
+      box-shadow: 0 14px 36px rgba(78, 59, 36, 0.10);
+    }
+
+    .screenshot-caption {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .gallery-hint {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    /* =========================================================
+       Download
+       ========================================================= */
 
     .download-panel {
       padding: 48px;
@@ -333,6 +404,44 @@
       justify-content: center;
       gap: 14px;
     }
+
+    .store-button {
+      min-height: 54px;
+      padding: 13px 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 14px;
+      background: #ffffff;
+      color: #111111;
+      font-weight: 800;
+      text-decoration: none;
+      transition:
+        transform 160ms ease,
+        box-shadow 160ms ease;
+    }
+
+    .store-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+    }
+
+    .store-button.disabled {
+      background: rgba(255, 255, 255, 0.10);
+      color: rgba(255, 255, 255, 0.55);
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .availability-note {
+      margin-top: 20px !important;
+      font-size: 0.88rem;
+    }
+
+    /* =========================================================
+       Footer
+       ========================================================= */
 
     .footer {
       padding: 42px 0;
@@ -379,6 +488,10 @@
       color: var(--text) !important;
       box-shadow: 0 8px 22px rgba(78, 59, 36, 0.07);
     }
+
+    /* =========================================================
+       Responsive
+       ========================================================= */
 
     @media (max-width: 860px) {
       .header-inner {
@@ -451,15 +564,28 @@
       .download-panel {
         padding: 28px 22px;
       }
+
+      .screenshot-card {
+        width: 76vw;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- =======================================================
+       Header
+       ======================================================= -->
+
   <header class="site-header">
     <div class="container header-inner">
+
       <a class="brand" href="#top" aria-label="Keeper トップ">
-        <img src="images/icon.png?v=3" alt="Keeper アプリアイコン">
+        <img
+          src="images/icon.png?v=4"
+          alt="Keeper アプリアイコン"
+        >
         <span>Keeper</span>
       </a>
 
@@ -472,14 +598,24 @@
         <a href="terms.html">利用規約</a>
         <a href="support.html">サポート</a>
       </nav>
+
     </div>
   </header>
 
+
   <main id="top">
+
+    <!-- =====================================================
+         Hero
+         ===================================================== -->
+
     <section class="hero">
       <div class="container hero-grid">
+
         <div>
-          <span class="eyebrow">Keeper v1.0</span>
+          <span class="eyebrow">
+            Keeper v1.0.1
+          </span>
 
           <h1>
             大切な情報を<br>
@@ -487,13 +623,26 @@
           </h1>
 
           <p class="hero-copy">
-            取扱説明書、PDF、写真、メモ、思い出。
+            取扱説明書、PDF、写真、URL、メモ、思い出。
             必要な情報をひとつにまとめて、自分らしく整理できる
             Android・iPhone対応アプリです。
           </p>
 
           <div class="hero-actions">
-            <a class="button secondary" href="#features">
+
+            <a
+              class="button"
+              href="https://apps.apple.com/app/keeper-manuals-more/id6797875211"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              App Storeで見る
+            </a>
+
+            <a
+              class="button secondary"
+              href="#features"
+            >
               Keeperについて
             </a>
 
@@ -505,23 +654,32 @@
             >
               お問い合わせ
             </a>
+
           </div>
         </div>
 
         <div class="hero-visual">
           <img
             class="app-icon"
-            src="images/icon.png?v=3"
+            src="images/icon.png?v=4"
             alt="フォルダーからKの紙が見えるKeeperのアプリアイコン"
           >
         </div>
+
       </div>
     </section>
 
+
+    <!-- =====================================================
+         Features
+         ===================================================== -->
+
     <section id="features" class="section">
       <div class="container">
+
         <div class="section-heading">
           <h2>必要な情報を、迷わず見つける。</h2>
+
           <p>
             Keeperは、情報を保存するだけでなく、
             後から気持ちよく探して使えることを大切にしています。
@@ -529,142 +687,334 @@
         </div>
 
         <div class="feature-grid">
+
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">📄</div>
-            <h3>PDFを端末へ保存</h3>
+
+            <h3>PDFを保存</h3>
+
             <p>
-              取扱説明書や大切なPDFをKeeper内へ保存し、
-              オフラインでも確認できます。
+              取扱説明書や大切なPDFをKeeperへ保存し、
+              必要なときにすぐ確認できます。
             </p>
           </article>
+
 
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">📷</div>
-            <h3>型番をOCRで読み取り</h3>
+
+            <h3>写真で記録</h3>
+
             <p>
-              カメラで型番を読み取り、面倒な手入力を減らします。
-              認識結果は確認してから利用できます。
+              写真や画像も情報と一緒に保存。
+              思い出や大切な記録もまとめて整理できます。
             </p>
           </article>
+
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🔗</div>
+
+            <h3>URLを保存</h3>
+
+            <p>
+              後で見返したいWebページや関連情報のURLも
+              Keeperへまとめて保存できます。
+            </p>
+          </article>
+
 
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">🔍</div>
-            <h3>マニュアル検索</h3>
+
+            <h3>すぐに見つかる</h3>
+
             <p>
-              メーカーや型番から取扱説明書の候補を探し、
-              自分で選んだ情報だけをKeeperできます。
+              カテゴリーや検索を使って、
+              必要な情報へすばやくアクセスできます。
             </p>
           </article>
+
 
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">📌</div>
-            <h3>ピン留めと並べ替え</h3>
+
+            <h3>ピン留めと整理</h3>
+
             <p>
               よく使う情報を上部へ固定し、
-              自分の使いやすい順番へ整理できます。
+              自分の使いやすい形に整理できます。
             </p>
           </article>
 
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🌙</div>
-            <h3>テーマとダークモード</h3>
-            <p>
-              複数のテーマカラーとライト・ダーク表示に対応。
-              自分らしい見た目で使えます。
-            </p>
-          </article>
 
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">🔒</div>
+
             <h3>端末認証でロック</h3>
+
             <p>
               Face ID、Touch ID、指紋認証など、
               端末の認証機能を利用してKeeperを守れます。
             </p>
           </article>
+
         </div>
       </div>
     </section>
+
+
+    <!-- =====================================================
+         Backup
+         ===================================================== -->
 
     <section id="backup" class="section">
       <div class="container">
+
         <div class="section-heading">
-          <h2>大切なデータをクラウドへ。</h2>
+          <h2>大切なデータを守る。</h2>
+
           <p>
-            バックアップは、利用者がボタンを押したときだけ実行されます。
+            Keeperの情報はバックアップして、
+            機種変更などに備えることができます。
           </p>
         </div>
 
+
         <div class="backup-panel">
+
           <article class="backup-item">
             <h3>Android</h3>
+
             <p>
-              Google Driveのアプリ専用領域へ保存。
-              バックアップの整合性をSHA-256で確認します。
+              Google Driveのアプリ専用領域へバックアップ。
+              大切なKeeperデータを保護します。
             </p>
           </article>
+
 
           <article class="backup-item">
             <h3>iPhone / iPad</h3>
+
             <p>
-              iCloudのCloudKit Private Databaseへ保存。
-              復元前にサイズとSHA-256を検証します。
+              端末またはiCloudへバックアップ。
+              バックアップしたデータから復元できます。
             </p>
           </article>
+
         </div>
       </div>
     </section>
+
+
+    <!-- =====================================================
+         Screenshots
+         ===================================================== -->
 
     <section id="screenshots" class="section">
       <div class="container">
+
         <div class="section-heading">
           <h2>Keeperの画面</h2>
+
           <p>
-            ストア公開用の画面画像は、準備ができ次第追加します。
+            大切な情報を保存して、整理して、必要なときにすぐ見つける。
+            Keeperの主な機能をご覧いただけます。
           </p>
         </div>
 
-        <div class="screenshot-placeholder">
-          <div>
-            <strong>Screenshots Coming Soon</strong><br>
-            ホーム、詳細、OCR、PDF、バックアップ画面を掲載予定です。
-          </div>
+
+        <div
+          class="screenshot-gallery"
+          aria-label="Keeper スクリーンショット"
+        >
+
+          <figure class="screenshot-card">
+            <img
+              src="images/screenshots/iOS_s01.png"
+              alt="Keeper ホーム画面"
+              loading="lazy"
+            >
+            <figcaption class="screenshot-caption">
+              大切な情報をひとつの場所へ
+            </figcaption>
+          </figure>
+
+
+          <figure class="screenshot-card">
+            <img
+              src="images/screenshots/iOS_s02.png"
+              alt="Keeper カテゴリー画面"
+              loading="lazy"
+            >
+            <figcaption class="screenshot-caption">
+              カテゴリーで見つけやすく整理
+            </figcaption>
+          </figure>
+
+
+          <figure class="screenshot-card">
+            <img
+              src="images/screenshots/iOS_s03.png"
+              alt="Keeper 詳細情報画面"
+              loading="lazy"
+            >
+            <figcaption class="screenshot-caption">
+              必要な情報をひと目で確認
+            </figcaption>
+          </figure>
+
+
+          <figure class="screenshot-card">
+            <img
+              src="images/screenshots/iOS_s04.png"
+              alt="Keeper PDF閲覧画面"
+              loading="lazy"
+            >
+            <figcaption class="screenshot-caption">
+              保存したPDFをいつでも確認
+            </figcaption>
+          </figure>
+
+
+          <figure class="screenshot-card">
+            <img
+              src="images/screenshots/iOS_s05.png"
+              alt="Keeper バックアップ画面"
+              loading="lazy"
+            >
+            <figcaption class="screenshot-caption">
+              大切なデータをバックアップ
+            </figcaption>
+          </figure>
+
+
+          <figure class="screenshot-card">
+            <img
+              src="images/screenshots/iOS_s06.png"
+              alt="Keeper データ復元画面"
+              loading="lazy"
+            >
+            <figcaption class="screenshot-caption">
+              バックアップから復元
+            </figcaption>
+          </figure>
+
+
+          <figure class="screenshot-card">
+            <img
+              src="images/screenshots/iOS_s07.png"
+              alt="Keeper カスタムカテゴリー作成画面"
+              loading="lazy"
+            >
+            <figcaption class="screenshot-caption">
+              あなただけのKeeperを作る
+            </figcaption>
+          </figure>
+
+
+          <figure class="screenshot-card">
+            <img
+              src="images/screenshots/iOS_s08.png"
+              alt="Keeper アプリロック画面"
+              loading="lazy"
+            >
+            <figcaption class="screenshot-caption">
+              プライバシーをしっかり守る
+            </figcaption>
+          </figure>
+
         </div>
+
+        <p class="gallery-hint">
+          ← 横にスクロールしてKeeperの画面を見る →
+        </p>
+
       </div>
     </section>
+
+
+    <!-- =====================================================
+         Download
+         ===================================================== -->
 
     <section id="download" class="section">
       <div class="container">
+
         <div class="download-panel">
-          <h2>Keeper v1.0</h2>
+
+          <h2>Keeper v1.0.1</h2>
 
           <p>
-            Google Play・App Storeでの公開を準備しています。
+            KeeperはApp Storeで公開中です。
           </p>
 
+
           <div class="download-actions">
-            <span class="button disabled">
+
+            <a
+              class="store-button"
+              href="https://apps.apple.com/app/keeper-manuals-more/id6797875211"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="KeeperをApp Storeで見る"
+            >
+               App Storeで見る
+            </a>
+
+
+            <span class="store-button disabled">
               Google Play — Coming Soon
             </span>
 
-            <span class="button disabled">
-              App Store — Coming Soon
-            </span>
           </div>
+
+
+          <p class="availability-note">
+            iPhone / iPad対応
+          </p>
+
         </div>
+
       </div>
     </section>
+
   </main>
+
+
+  <!-- =======================================================
+       Footer
+       ======================================================= -->
 
   <footer class="footer">
     <div class="container footer-inner">
+
       <div class="footer-links">
-        <a href="privacy.html">プライバシーポリシー</a>
-        <a href="privacy.html#english">Privacy Policy</a>
-        <a href="terms.html">利用規約</a>
-        <a href="terms.html#english">Terms of Use</a>
-        <a href="support.html">サポート</a>
-        <a href="support.html#english">Support</a>
+
+        <a href="privacy.html">
+          プライバシーポリシー
+        </a>
+
+        <a href="privacy.html#english">
+          Privacy Policy
+        </a>
+
+        <a href="terms.html">
+          利用規約
+        </a>
+
+        <a href="terms.html#english">
+          Terms of Use
+        </a>
+
+        <a href="support.html">
+          サポート
+        </a>
+
+        <a href="support.html#english">
+          Support
+        </a>
+
         <a
           class="footer-contact"
           href="https://forms.gle/PYEoVw6iZAjhQ6Jw5"
@@ -673,9 +1023,15 @@
         >
           お問い合わせ
         </a>
+
       </div>
-      <div>© 2026 Keeper</div>
+
+      <div>
+        © 2026 Keeper
+      </div>
+
     </div>
   </footer>
+
 </body>
 </html>
