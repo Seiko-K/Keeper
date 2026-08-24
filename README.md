@@ -18,7 +18,7 @@
     <img
       src="docs/badges/googleplay-badge-01-getit.width-1440.png"
       height="48"
-      alt="Google Play で手に入れよう"
+      alt="Get it on Google Play"
     >
   </a>
   &nbsp;&nbsp;
@@ -65,9 +65,9 @@ Keeper is built around a simple idea:
 
 > **You choose what matters. Keeper keeps it.**
 
-AI and search features may help suggest information, but the user always decides what to Keeper.
+Search and assistance features can help users find information, but the final choice always belongs to the user.
 
-The project was independently designed, developed, tested, and released for both Android and iOS.
+The project was independently designed, developed, tested, and released as a production application for both Android and iOS.
 
 ---
 
@@ -103,13 +103,17 @@ The user reviews the results, chooses the appropriate manual, and decides whethe
 
 The captured OCR image is used for recognition and is not automatically stored as a registered product image.
 
+The workflow keeps the user in control:
+
+**Keeper helps find it. You choose it. Keeper stores it.**
+
 ---
 
 ## More Than Manuals
 
 Manual search is one of Keeper's main features, but Keeper is intentionally designed to be flexible.
 
-For example, Keeper can also be used for:
+Keeper can also be used for:
 
 - 🍳 Recipes and cooking references
 - ✈️ Travel plans and useful travel information
@@ -120,9 +124,9 @@ For example, Keeper can also be used for:
 - 📷 Photos with related notes
 - 📝 Personal memos and records
 
-Keeper does not decide what is important.
+There is no fixed definition of what belongs in Keeper.
 
-**You do.**
+**You decide what matters.**
 
 ---
 
@@ -207,9 +211,9 @@ The project demonstrates an end-to-end product development workflow:
 
 **Idea → Requirements → UX → Implementation → Testing → Store Release → Improvement**
 
-The goal is not simply to demonstrate code.
+Keeper is not presented simply as a coding exercise.
 
-It is to demonstrate the ability to take a product idea from **0 → 1** and deliver a working mobile application to real users.
+It demonstrates the ability to take a product idea from **0 → 1**, make product and UX decisions, implement the application, handle platform-specific requirements, and deliver a working mobile product to real users on both major mobile platforms.
 
 ---
 
@@ -230,7 +234,7 @@ See the Keeper website for details about:
 
 ## Website
 
-Keeper product information, features, privacy policy, terms, and support:
+Keeper product information, features, privacy policy, terms, downloads, and support:
 
 **https://seiko-k.github.io/Keeper/**
 
