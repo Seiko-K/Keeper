@@ -1,5 +1,11 @@
 # Keeper - Manuals & More
 
+# Keeper - Manuals & More
+
+<p align="center">
+  <img src="docs/images/icon.png" width="120" alt="Keeper App Icon">
+</p>
+
 <p align="center">
   <strong>Find manuals faster. Keep anything that matters.</strong>
 </p>
