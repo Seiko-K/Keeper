@@ -14,21 +14,8 @@
 </p>
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.seiko.keeper">
-    <img
-      src="docs/badges/googleplay-badge-01-getit.width-1440.png"
-      height="60"
-      alt="Get it on Google Play"
-    >
-  </a>
-
-  <a href="https://apps.apple.com/us/app/keeper-manuals-more/id6797875211?itscg=30200&itsct=apps_box_link&mttnsubad=6797875211">
-    <img
-      src="docs/badges/en-us.svg"
-      height="60"
-      alt="Download on the App Store"
-    >
-  </a>
+  <a href="https://play.google.com/store/apps/details?id=com.seiko.keeper"><img src="docs/badges/googleplay-badge-01-getit.width-1440.png" height="60" alt="Get it on Google Play"></a>
+  <a href="https://apps.apple.com/us/app/keeper-manuals-more/id6797875211?itscg=30200&itsct=apps_box_link&mttnsubad=6797875211"><img src="docs/badges/en-us.svg" height="60" alt="Download on the App Store"></a>
 </p>
 
 <p align="center">
