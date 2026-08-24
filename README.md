@@ -24,7 +24,7 @@
   &nbsp;&nbsp;
   <a href="https://apps.apple.com/us/app/keeper-manuals-more/id6797875211?itscg=30200&itsct=apps_box_link&mttnsubad=6797875211">
     <img
-      src="docs/badges/black.svg"
+      src="docs/badges/en-us.svg"
       height="60"
       alt="Download on the App Store"
     >
