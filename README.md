@@ -16,12 +16,12 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.seiko.keeper">
     <img
-      src="docs/badges/GetItOnGooglePlay_Badge_Web_color_Japanese.png"
+      src="docs/badges/googleplay-badge-01-getit.width-1440.png"
       height="48"
       alt="Google Play で手に入れよう"
     >
   </a>
-  &nbsp;
+  &nbsp;&nbsp;
   <a href="https://apps.apple.com/app/keeper-manuals-more/id6797875211">
     <img
       src="docs/badges/download-on-the-app-store.svg"
