@@ -5,14 +5,23 @@
 </p>
 
 <p align="center">
-  <strong>Keep what matters.</strong>
+  <strong>Find manuals faster. Keep anything that matters.</strong>
 </p>
 
 <p align="center">
-  A local-first Flutter app for organizing manuals, PDFs, URLs, photos, notes, and important information in one place.
+  Scan a product model number with OCR, search for its manual, and Keeper it.<br>
+  Manuals are only the beginning — PDFs, URLs, photos, notes, recipes, travel information, work references, and more can all be organized in one place.
 </p>
 
 <p align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.seiko.keeper">
+    <img
+      src="docs/badges/GetItOnGooglePlay_Badge_Web_color_Japanese.png"
+      height="48"
+      alt="Google Play で手に入れよう"
+    >
+  </a>
+  &nbsp;
   <a href="https://apps.apple.com/app/keeper-manuals-more/id6797875211">
     <img
       src="docs/badges/download-on-the-app-store.svg"
@@ -23,33 +32,56 @@
 </p>
 
 <p align="center">
-  <strong>iOS:</strong> Available on the App Store<br>
-  <strong>Android:</strong> Google Play closed testing
+  <strong>Available on Google Play and the App Store.</strong>
 </p>
+
+---
+
+## 🔎 Scan. Search. Keeper.
+
+One of Keeper's core features is its OCR-assisted manual search workflow.
+
+Instead of manually typing a long product model number:
+
+**Take a photo → Detect the model number with OCR → Search for manuals → Choose one → Keeper it.**
+
+Keeper helps reduce the friction of finding a manual when you need it.
+
+But Keeper is **not just a manual app**.
+
+It is designed as a personal place for keeping the information you do not want to lose.
+
+Manuals, PDFs, URLs, photos, notes, recipes, travel information, work references, hobby collections — organize them your way and find them again when you need them.
 
 ---
 
 ## About Keeper
 
-Keeper is a Flutter application designed to help users keep important information organized and easy to find.
+Keeper is a local-first Flutter application for organizing important personal information in one place.
 
-Manuals, PDFs, URLs, photos, product information, and personal notes can be stored together instead of being scattered across different apps and folders.
+Information that would normally be scattered across browser bookmarks, photo libraries, PDF folders, cloud storage, and note apps can be organized together inside Keeper.
 
-Keeper follows a local-first approach and focuses on simple, intuitive interaction.
+Keeper is built around a simple idea:
 
-The project was independently designed, developed, tested, and released for both iOS and Android.
+> **You choose what matters. Keeper keeps it.**
+
+AI and search features may help suggest information, but the user always decides what to Keeper.
+
+The project was independently designed, developed, tested, and released for both Android and iOS.
 
 ---
 
 ## Features
 
-- 📄 Store and manage PDF manuals
+- 📸 Capture product model numbers with OCR
+- 🔎 Search for manuals using detected model numbers
+- 📄 Store and manage PDF manuals and other PDF files
 - 🔗 Save useful URLs
-- 📷 Capture product model numbers with OCR
+- 📝 Keep personal notes
+- 🖼 Store photos with your information
+- 🗂 Organize information by category
 - 🔍 Search stored information quickly
 - 📌 Pin important items
-- 📝 Add personal notes and photos
-- 🗂 Organize information by category
 - ↕️ Reorder and manage cards
 - 🔒 Face ID / Touch ID / Fingerprint authentication
 - ☁️ Google Drive backup on Android
@@ -59,13 +91,38 @@ The project was independently designed, developed, tested, and released for both
 
 ---
 
-## OCR Model Number Recognition
+## OCR Manual Search
 
-Keeper includes an OCR-assisted workflow for product registration.
+Keeper includes an OCR-assisted workflow designed to make finding product manuals easier.
 
-Users can photograph a product label or model number, and Keeper extracts text from the image to help identify the model number without requiring manual entry.
+Users can photograph a product label or model number. Keeper extracts text from the image and helps identify the model number without requiring manual entry.
 
-The captured image is used for recognition and is not automatically stored as a registered product image.
+The detected model number can then be used to search for manual candidates.
+
+The user reviews the results, chooses the appropriate manual, and decides whether to Keeper it.
+
+The captured OCR image is used for recognition and is not automatically stored as a registered product image.
+
+---
+
+## More Than Manuals
+
+Manual search is one of Keeper's main features, but Keeper is intentionally designed to be flexible.
+
+For example, Keeper can also be used for:
+
+- 🍳 Recipes and cooking references
+- ✈️ Travel plans and useful travel information
+- 💼 Work documents and reference material
+- 🎨 Hobby information and collections
+- 📑 PDFs you want to find again
+- 🔗 Useful websites and resources
+- 📷 Photos with related notes
+- 📝 Personal memos and records
+
+Keeper does not decide what is important.
+
+**You do.**
 
 ---
 
@@ -75,8 +132,10 @@ Keeper is designed around local data ownership.
 
 Core information is stored on the device, while platform-specific backup options are available for users who want to protect or transfer their Keeper data.
 
-- Android: Google Drive backup
-- iOS: iCloud backup
+- **Android:** Google Drive backup
+- **iOS:** iCloud backup
+
+This allows Keeper to remain useful without requiring users to store their personal collection in a dedicated Keeper cloud service.
 
 ---
 
@@ -88,11 +147,17 @@ Keeper supports device-native authentication where available.
 - Touch ID
 - Fingerprint authentication
 
-This allows users to protect the information stored in Keeper using the security features already provided by their device.
+Users can protect the information stored in Keeper using the security features already provided by their device.
 
 ---
 
-## Platforms
+## Download
+
+### Android
+
+Keeper v1.0.1 is available on Google Play.
+
+[Get Keeper on Google Play](https://play.google.com/store/apps/details?id=com.seiko.keeper)
 
 ### iOS
 
@@ -100,17 +165,11 @@ Keeper v1.0.1 is available on the App Store.
 
 [View Keeper - Manuals & More on the App Store](https://apps.apple.com/app/keeper-manuals-more/id6797875211)
 
-### Android
-
-Keeper is currently undergoing closed testing on Google Play.
-
-The Google Play Store link will be added after the production release.
-
 ---
 
 ## Technology
 
-Keeper is built with Flutter and Dart.
+Keeper is built with **Flutter and Dart**.
 
 The project includes practical implementations of:
 
@@ -118,41 +177,62 @@ The project includes practical implementations of:
 - Local database management
 - PDF and file handling
 - OCR / text recognition
+- Manual search workflows
 - Native biometric authentication
 - Platform-specific cloud backup
 - Mobile advertising integration
-- iOS and Android platform integration
-- App Store and Google Play release workflows
+- Android and iOS platform integration
+- App Store release workflows
+- Google Play production release workflows
 
 ---
 
 ## Development Approach
 
-Keeper was developed from requirements definition through production release as an independent application project.
+Keeper was developed from initial requirements through production release as an independent mobile application project.
 
 The development process includes:
 
-1. Requirements and UX design
-2. Flutter implementation
-3. AI-assisted development and code review
-4. Android and iOS device testing
-5. Regression testing
-6. Store preparation and compliance
-7. App Store / Google Play deployment
-8. Continuous UX improvement based on real-device testing
+1. Requirements definition
+2. UX / UI design
+3. Architecture and implementation
+4. AI-assisted development and code review
+5. Android and iOS device testing
+6. Regression testing
+7. Store preparation and compliance
+8. App Store and Google Play deployment
+9. Continuous UX improvement based on real-device testing
 
-The goal of this project is not only to build a working application, but to demonstrate an end-to-end product development workflow from an initial idea to a production-ready mobile application.
+The project demonstrates an end-to-end product development workflow:
+
+**Idea → Requirements → UX → Implementation → Testing → Store Release → Improvement**
+
+The goal is not simply to demonstrate code.
+
+It is to demonstrate the ability to take a product idea from **0 → 1** and deliver a working mobile application to real users.
 
 ---
 
-## Privacy Policy
+## Privacy
 
-Keeper's privacy policy is available in Japanese and English.
+Keeper's privacy information is published in Japanese and English.
 
-- Japanese
-- English
+See the Keeper website for details about:
 
-See the published Keeper privacy policy for details about data handling, permissions, advertising, and backup functionality.
+- Data handling
+- Device permissions
+- Advertising
+- OCR
+- Backup functionality
+- Platform-specific services
+
+---
+
+## Website
+
+Keeper product information, features, privacy policy, terms, and support:
+
+**https://seiko-k.github.io/Keeper/**
 
 ---
 
@@ -160,7 +240,7 @@ See the published Keeper privacy policy for details about data handling, permiss
 
 For inquiries, feedback, or support:
 
-https://forms.gle/PYEoVw6iZAjhQ6Jw5
+**https://forms.gle/PYEoVw6iZAjhQ6Jw5**
 
 ---
 
@@ -168,8 +248,8 @@ https://forms.gle/PYEoVw6iZAjhQ6Jw5
 
 | Platform | Version | Status |
 | --- | --- | --- |
-| iOS | **v1.0.1** | Available on the App Store |
-| Android | **v1.0.1** | Closed testing on Google Play |
+| Android | **v1.0.1** | 🟢 Available on Google Play |
+| iOS | **v1.0.1** | 🟢 Available on the App Store |
 
 ---
 
@@ -177,8 +257,21 @@ https://forms.gle/PYEoVw6iZAjhQ6Jw5
 
 Keeper is actively maintained.
 
-Future development will focus on improving usability, search, platform integration, and the overall experience of keeping personal information organized.
+Future development will continue to improve:
+
+- OCR model-number recognition
+- Manual search
+- Search accuracy
+- Usability
+- Platform integration
+- Personal information organization
 
 ---
 
-© 2026 Keeper
+<p align="center">
+  <strong>Find it. Choose it. Keeper it.</strong>
+</p>
+
+<p align="center">
+  © 2026 Keeper
+</p>
