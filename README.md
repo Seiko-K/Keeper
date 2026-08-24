@@ -1,11 +1,12 @@
 # Keeper - Manuals & More
 
 <p align="center">
-  <img src="docs/images/icon.png" width="120" alt="Keeper App Icon">
+  <strong>Find manuals faster. Keep anything that matters.</strong>
 </p>
 
 <p align="center">
-  <strong>Find manuals faster. Keep anything that matters.</strong>
+  Scan a product model number with OCR, search for its manual, and Keeper it.<br>
+  Manuals are only the beginning — PDFs, URLs, photos, notes, recipes, travel information, work references, and more can all be organized in one place.
 </p>
 
 <p align="center">
