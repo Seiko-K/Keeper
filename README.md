@@ -17,7 +17,7 @@
   <a href="https://play.google.com/store/apps/details?id=com.seiko.keeper">
     <img
       src="docs/badges/googleplay-badge-01-getit.width-1440.png"
-      height="60"
+      height="70"
       alt="Get it on Google Play"
     >
   </a>
