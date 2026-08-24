@@ -9,15 +9,10 @@
 </p>
 
 <p align="center">
-  Scan a product model number with OCR, search for its manual, and Keeper it.<br>
-  Manuals are only the beginning — PDFs, URLs, photos, notes, recipes, travel information, work references, and more can all be organized in one place.
-</p>
-
-<p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.seiko.keeper">
     <img
       src="docs/badges/googleplay-badge-01-getit.width-1440.png"
-      height="60"
+      height="68"
       alt="Get it on Google Play"
     >
   </a>
