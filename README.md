@@ -23,7 +23,6 @@
 </p>
 
 ---
----
 
 ## 🔎 Scan. Search. Keeper.
 
