@@ -9,13 +9,12 @@
 </p>
 
 <p align="center">
-  Scan a product model number with OCR, search for its manual, and Keeper it.<br>
-  Manuals are only the beginning — PDFs, URLs, photos, notes, recipes, travel information, work references, and more can all be organized in one place.
+  <a href="https://play.google.com/store/apps/details?id=com.seiko.keeper"><img src="docs/badges/googleplay.png" height="60" alt="Get it on Google Play"></a>
+  <a href="https://apps.apple.com/us/app/keeper-manuals-more/id6797875211?itscg=30200&itsct=apps_box_link&mttnsubad=6797875211"><img src="docs/badges/en-us.svg" height="60" alt="Download on the App Store"></a>
 </p>
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.seiko.keeper"><img src="docs/badges/googleplay-badge-01-getit.width-1440.png" height="60" alt="Get it on Google Play"></a>
-  <a href="https://apps.apple.com/us/app/keeper-manuals-more/id6797875211?itscg=30200&itsct=apps_box_link&mttnsubad=6797875211"><img src="docs/badges/en-us.png" height="60" alt="Download on the App Store"></a>
+  <strong>Available on Google Play and the App Store.</strong>
 </p>
 
 <p align="center">
